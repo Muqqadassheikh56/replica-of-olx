@@ -34,11 +34,11 @@ export default function MediaCard(props) {
                 </IconButton>
                 <CardMedia
                     className={classes.media}
-                    image={img}
-                    onClick={()=>{props.homeFunc({price:props.price, desc:props.description, img:img, location:props.location, time:props.time, title:props.title})}}
+                    image={props.img}
+                    onClick={()=>{props.homeFunc({price:props.price, desc:props.description, img:props.img, location:props.location, time:props.time, title:props.title})}}
 
                 />
-                <CardContent onClick={()=>{props.homeFunc({price:props.price, desc:props.description, img:img, location:props.location, time:props.time, title:props.title})}}>
+                <CardContent onClick={()=>{props.homeFunc({price:props.price, desc:props.description, img:props.img, location:props.location, time:props.time, title:props.title})}}>
                     <Typography gutterBottom variant="h5" component="h2">
                         {props.price}
                     </Typography>
@@ -47,7 +47,7 @@ export default function MediaCard(props) {
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions className="pointer" onClick={()=>{props.homeFunc({price:props.price, desc:props.description, img:img, location:props.location, time:props.time, title:props.title})}}>
+            <CardActions className="pointer" onClick={()=>{props.homeFunc({price:props.price, desc:props.description, img:props.img, location:props.location, time:props.time, title:props.title})}}>
                 <small> {props.location}</small>
                 <small className="ml-auto"> {props.time}</small>
             </CardActions>
